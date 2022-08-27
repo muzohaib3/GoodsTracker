@@ -114,7 +114,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun initListeners()
     {
-
+//
         binding.loginBtn.click {
             validations()
         }
