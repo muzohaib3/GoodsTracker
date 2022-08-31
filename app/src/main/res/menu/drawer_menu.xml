@@ -4,10 +4,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/login_user"
-        android:orderInCategory="200"
-        android:title="@string/login"
-        android:icon="@drawable/user_auth"
+        android:id="@+id/loginItem"
+        android:title="Login"
+        android:icon="@drawable/person"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/themeItem"
+        android:title="Login"
+        android:icon="@drawable/theme"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/settings"
         app:showAsAction="always"/>
 
 </menu>

@@ -56,9 +56,6 @@ class WarehouseDetailsActivity : AppCompatActivity()
         setTransparentStatusBarColor(R.color.transparent)
         dialog = CustomProgressDialog(this)
         deviceId = UUID.randomUUID().toString()
-        binding.toolbar.click {
-            clearPreferences(this)
-        }
 
         binding.userNameTV.text = LocalPreferences.getString(this,
             LocalPreferences.AppLoginPreferences.userName

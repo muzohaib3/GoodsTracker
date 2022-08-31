@@ -241,9 +241,6 @@ class AddUpdatePalletDetails : AppCompatActivity() {
             onBackPressed()
         }
 
-        binding.toolbar.click {
-            clearPreferences(this)
-        }
     }
 
     private fun initObserver(){

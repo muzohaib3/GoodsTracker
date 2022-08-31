@@ -260,10 +260,6 @@ class WarehouseActivity : AppCompatActivity() {
 
     private fun initListeners() {
 
-        binding.toolbar.click {
-            clearPreferences(this)
-        }
-
         binding.backBtn.click {
             onBackPressed()
         }

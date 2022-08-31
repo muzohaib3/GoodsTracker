@@ -24,9 +24,8 @@
         android:layout_marginTop="@dimen/_35sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_5sdp"
-        android:tint="@color/white"
         android:padding="@dimen/_5sdp"
-        android:src="@drawable/logout" />
+        android:tint="@color/white" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/userNameTV"

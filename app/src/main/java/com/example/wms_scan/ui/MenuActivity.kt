@@ -48,8 +48,7 @@ class MenuActivity : AppCompatActivity() {
 
 
     override fun onBackPressed() {
-        finishAffinity()
-        exitProcess(0)
+        toast("Press logout to finish")
     }
 
     private fun permissions()
@@ -184,8 +183,10 @@ class MenuActivity : AppCompatActivity() {
         binding.scanCartonIV.click {
             if (isNetworkConnected(this)){
                 gotoActivity(ScannerActivity::class.java,scanCarton,true)
+                finish()
             }
         }
+
 
         binding.swipeRefresh.setOnRefreshListener {
             viewModel.userLocation(
@@ -199,7 +200,7 @@ class MenuActivity : AppCompatActivity() {
         val settings: SharedPreferences =
             context.getSharedPreferences(PREF, Context.MODE_PRIVATE)
         settings.edit().clear().apply()
-        gotoActivity(LoginActivity::class.java)
+        gotoActivity(ScannerActivity::class.java)
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         finish()
     }

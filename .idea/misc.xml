@@ -10,19 +10,37 @@
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/drawable/blue_rounded_bg.xml" value="0.155" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/drawable/grey_circle_bg.xml" value="0.155" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/drawable/light_blue_circle_bg.xml" value="0.155" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/drawable/login.xml" value="0.155" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/drawable/rhombus_bg.xml" value="0.155" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/drawable/white_back_btn.xml" value="0.155" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_add_update_pallet_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_add_update_rack_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_add_update_shelf_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_alert_dialog_box.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_carton_detail.xml" value="0.25" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_create_carton.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_createcarton_scan.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_custom_dialog.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_menu.xml" value="0.25" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_pallets.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_permission_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_qr_code_detail_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_racks.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_scan_all_hierarchy.xml" value="0.25" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_scan_carton.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_scanner.xml" value="0.22" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_scanner.xml" value="0.25" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_scanner_camera.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_shelf.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_theme_dialog.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_warehouse.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/activity_warehouse_details.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/carton_by_qn_view.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/fragment_alert_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/qr_code_detail_activity.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/layout/scan_carton_list_view.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/menu/drawer_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BI.IT-021/Downloads/WMS-Scan/WMS-Scan/app/src/main/res/menu/drawer_menu.xml" value="0.25" />
         <entry key="..\:/Users/BI.IT-021/StudioProjects/WMS-Scan/app/src/main/res/drawable-v24/dark_green_rounded_bg.xml" value="0.181" />
         <entry key="..\:/Users/BI.IT-021/StudioProjects/WMS-Scan/app/src/main/res/drawable-v24/gradient_blue_rounded_bg.xml" value="0.161" />
         <entry key="..\:/Users/BI.IT-021/StudioProjects/WMS-Scan/app/src/main/res/drawable-v24/gradient_green_rounded_bg.xml" value="0.161" />
@@ -132,12 +150,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.1" />
-      </ProjectState>
-    </option>
   </component>
 </project>

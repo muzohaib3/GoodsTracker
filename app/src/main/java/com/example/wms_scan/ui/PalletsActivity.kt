@@ -124,10 +124,6 @@ class PalletsActivity : AppCompatActivity() {
 
     private fun initListeners(){
 
-        binding.toolbar.click {
-            clearPreferences(this)
-        }
-
         binding.swipeRefresh.setOnRefreshListener {
             if (isNetworkConnected(this))
             {

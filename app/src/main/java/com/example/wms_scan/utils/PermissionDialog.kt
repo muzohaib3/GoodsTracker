@@ -9,7 +9,8 @@ import com.example.scanmate.viewModel.MainViewModel
 import com.example.wms_scan.R
 import com.example.wms_scan.databinding.ActivityPermissionDialogBinding
 
-class PermissionDialog(context: Context) : Dialog(context, R.style.customDialog) {
+class PermissionDialog(context: Context) : Dialog(context, R.style.customDialog)
+{
     private lateinit var viewModel: MainViewModel
 
     init {

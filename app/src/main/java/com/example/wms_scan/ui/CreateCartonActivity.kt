@@ -131,9 +131,6 @@ class CreateCartonActivity : AppCompatActivity() {
 
     private fun initListeners(){
 
-        binding.toolbar.click {
-            clearPreferences(this)
-        }
 
         binding.scanBtn.click {
             binding.scanBtn.gone()

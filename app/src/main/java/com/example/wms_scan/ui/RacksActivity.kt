@@ -102,9 +102,6 @@ class RacksActivity : AppCompatActivity() {
 
     private fun initListeners(){
 
-        binding.toolbar.click {
-            clearPreferences(this)
-        }
         binding.rackAddBTN.click {
 
             if (isNetworkConnected(this))

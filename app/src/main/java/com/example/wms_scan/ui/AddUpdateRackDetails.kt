@@ -142,9 +142,6 @@ class AddUpdateRackDetails : AppCompatActivity() {
                 LocalPreferences.getBoolean(this, isRefreshRequired)
             }
 
-        binding.toolbar.click {
-            clearPreferences(this)
-        }
 
         binding.updateRackBtn.click {
 

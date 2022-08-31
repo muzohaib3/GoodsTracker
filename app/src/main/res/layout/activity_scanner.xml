@@ -1,233 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    android:id="@+id/scannerView"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.ScannerActivity"
-    android:background="@color/md_theme_dark_background">
+    android:background="@color/md_theme_dark_background"
+    android:clickable="true">
 
-    <!--    <androidx.appcompat.widget.AppCompatImageView-->
-    <!--        android:id="@+id/backBtn"-->
-    <!--        android:layout_width="@dimen/_30sdp"-->
-    <!--        android:layout_height="@dimen/_30sdp"-->
-    <!--        android:layout_alignParentStart="true"-->
-    <!--        android:layout_marginStart="@dimen/_20sdp"-->
-    <!--        android:layout_marginTop="@dimen/_40sdp"-->
-    <!--        android:src="@drawable/white_back_btn" />-->
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_30sdp"
-        app:menu="@menu/drawer_menu"
-        android:visibility="gone" >
-
-        <ImageView
-            android:id="@+id/backBtn"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:src="@drawable/white_back_btn" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:fontFamily="@font/amiko"
-            android:text="Scan Goods"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_20sdp" />
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarOnly"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:visibility="gone">
-
-        <ImageView
-            android:id="@+id/backBtnOnly"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:src="@drawable/white_back_btn" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:fontFamily="@font/amiko"
-            android:text="Scan Goods"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_20sdp" />
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/scanHeaderTv"
+    <com.example.wms_scan.utils.TextureVideoView
+        android:id="@+id/video_splash"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:text=""
-        android:layout_below="@id/toolbar"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_25ssp" />
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/scanCont"
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/scanHeaderTv"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/white_rounded_bg"
-        android:orientation="vertical">
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/scanOptionCont"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_40sdp"
-            android:orientation="vertical"
-            android:visibility="visible">
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/scanBtn"
-                android:layout_width="@dimen/_300sdp"
-                android:layout_height="@dimen/_300sdp"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_20sdp"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/qr_anim" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/scanTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:fontFamily="@font/amiko"
-                android:text="@string/scan_item_product"
-                android:textAllCaps="true"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_16ssp" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/loginCont"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_30sdp"
-            android:orientation="vertical"
-            android:visibility="visible">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp">
-
-
-                <TextView
-                    android:id="@+id/orTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:background="@drawable/grey_circle_bg"
-                    android:elevation="@dimen/_3sdp"
-                    android:padding="@dimen/_20sdp"
-                    android:text="OR"
-                    android:textColor="@color/dark_hollow_black"
-                    android:textSize="@dimen/_18ssp"
-                    android:textStyle="bold" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerInParent="true"
-                    android:layout_toStartOf="@id/orTV"
-                    android:background="@color/light_grey" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/light_grey"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerInParent="true"
-                    android:layout_toEndOf="@id/orTV"/>
-
-            </RelativeLayout>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/manualOptionCont"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_100sdp"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:fontFamily="@font/amiko"
-                android:text="Manual Search"
-                android:textAllCaps="true"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_20ssp"
-                android:textStyle="bold" />
-
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/numOrMatNameTV"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:background="@drawable/hover_click_editext_bg"
-                android:drawableStart="@drawable/edit_icon"
-                android:drawablePadding="@dimen/_15sdp"
-                android:drawableTint="@color/dark_hollow_black"
-                android:hint="@string/mName_or_AnaNo"
-                android:inputType="textCapCharacters"
-                android:paddingStart="@dimen/_20sdp"
-                android:textSize="@dimen/_14ssp" />
-
-            <TextView
-                android:id="@+id/searchBtn"
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_50sdp"
-                android:layout_gravity="end"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:background="@drawable/hollow_black_rounded_bg"
-                android:fontFamily="@font/amiko"
-                android:gravity="center"
-                android:text="Search"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_16ssp" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:alpha="0.4" />
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -283,6 +73,288 @@
             android:textStyle="bold"
             app:fontFamily="@font/amiko"
             app:textAllCaps="true" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:id="@+id/toolbarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_40sdp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:src="@drawable/white_back_btn"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/scanToolbarTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_toEndOf="@id/backBtn"
+            android:fontFamily="@font/amiko"
+            android:text="Scan Goods"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/loginIV"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/person" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/changeThemeIV"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/paint" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:visibility="gone"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        app:menu="@menu/drawer_menu">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/amiko"
+            android:text="Scan Goods"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/scanHeaderTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/_25ssp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/scanCont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scanHeaderTv"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/white_rounded_bg"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/themeChangeCont"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_below="@id/toolbarHeader"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/grey_stroke_white_rounded_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/theme1"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@color/white" />
+
+        <ImageView
+            android:id="@+id/theme2"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/wh"
+            android:scaleType="centerCrop"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/scanOptionCont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/scanBtn"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/qr_anim" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/scanTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/amiko"
+            android:text="@string/scan_item_product"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/manualOptionCont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/manualSearchTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:fontFamily="@font/amiko"
+            android:text="Manual Search"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/numOrMatNameTV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/hover_click_editext_bg"
+            android:drawableStart="@drawable/edit_icon"
+            android:drawablePadding="@dimen/_15sdp"
+            android:drawableTint="@color/dark_hollow_black"
+            android:hint="@string/mName_or_AnaNo"
+            android:inputType="textCapCharacters"
+            android:paddingStart="@dimen/_20sdp"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/searchBtn"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/hollow_black_rounded_bg"
+            android:fontFamily="@font/amiko"
+            android:gravity="center"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/loginCont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:orientation="vertical"
+        android:layout_below="@+id/scanOptionCont"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp">
+
+
+            <TextView
+                android:id="@+id/orTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/grey_circle_bg"
+                android:elevation="@dimen/_3sdp"
+                android:padding="@dimen/_20sdp"
+                android:text="OR"
+                android:textColor="@color/dark_hollow_black"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@id/orTV"
+                android:background="@color/light_grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/orTV"
+                android:background="@color/light_grey" />
+
+        </RelativeLayout>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

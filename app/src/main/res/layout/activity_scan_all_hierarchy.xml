@@ -26,7 +26,6 @@
         android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_5sdp"
         android:padding="@dimen/_5sdp"
-        android:src="@drawable/logout"
         android:tint="@color/white" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -120,7 +119,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:cardCornerRadius="@dimen/_20sdp"
                 app:cardElevation="@dimen/_10sdp">
 
@@ -345,7 +344,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:visibility="visible"
+                android:visibility="gone"
                 app:cardCornerRadius="@dimen/_45sdp"
                 app:cardElevation="@dimen/_15sdp">
 

@@ -128,11 +128,8 @@ class ShowAllHierarchy : AppCompatActivity() {
             {
                 cartonAnalyticalNo = intent.extras?.getString("c").toString()
                 viewModel.getCartonQnWise(cartonAnalyticalNo)
-
             }
         }
-
-//        cartonAnalyticalKey = intent.extras?.getBoolean("analyticalKey")!!
     }
 
     private fun initObserver(){
@@ -141,9 +138,10 @@ class ShowAllHierarchy : AppCompatActivity() {
          *  GET SCANALL OBSERVER
          */
 
-        viewModel.scanAll.observe(this){
-            when(it.status){
-
+        viewModel.scanAll.observe(this)
+        {
+            when(it.status)
+            {
                 Status.LOADING -> {
                     dialog.show()
                 }
@@ -159,15 +157,15 @@ class ShowAllHierarchy : AppCompatActivity() {
                         {
                             try
                             {
-                                val whName = it.data?.get(0)?.wHName.toString()
-                                val rackName = it.data?.get(0)?.rackName.toString()
-                                val shelfName = it.data?.get(0)?.shelfName.toString()
-                                val palletName = it.data?.get(0)?.pilotName.toString()
-                                whNo = it.data?.get(0)?.wHNo.toString()
-                                rackNo = it.data?.get(0)?.rackNo.toString()
-                                shelfNo = it.data?.get(0)?.shelfNo.toString()
-                                palletNo = it.data?.get(0)?.pilotNo.toString()
-                                busLocNo = it.data?.get(0)?.locationNo.toString()
+                                val whName = it.data[0].wHName.toString()
+                                val rackName = it.data[0].rackName.toString()
+                                val shelfName = it.data[0].shelfName.toString()
+                                val palletName = it.data[0].pilotName.toString()
+                                whNo = it.data[0].wHNo.toString()
+                                rackNo = it.data[0].rackNo.toString()
+                                shelfNo = it.data[0].shelfNo.toString()
+                                palletNo = it.data[0].pilotNo.toString()
+                                busLocNo = it.data[0].locationNo.toString()
 
                                 binding.WHTV.text = whName
                                 binding.rackTV.text = rackName
@@ -190,7 +188,8 @@ class ShowAllHierarchy : AppCompatActivity() {
                                 when
                                 {
 
-                                    palette.contains("PL") ->{
+                                    palette.contains("PL") ->
+                                    {
                                         viewModel.getCarton(
                                             Utils.getSimpleTextBody(palletNo),
                                             Utils.getSimpleTextBody(busLocNo)
@@ -200,8 +199,8 @@ class ShowAllHierarchy : AppCompatActivity() {
                                         toast("global var palletNo: $palletNo")
                                     }
 
-                                    shelve.contains("SF") ->{
-
+                                    shelve.contains("SF") ->
+                                    {
                                         val animFade = AnimationUtils.loadAnimation(this,R.anim.fade_out)
                                         viewModel.getPallet(
                                             Utils.getSimpleTextBody(""),
@@ -216,8 +215,8 @@ class ShowAllHierarchy : AppCompatActivity() {
                                         binding.palletCont.startAnimation(animFade)
                                     }
 
-                                    rack.contains("RK") ->{
-
+                                    rack.contains("RK") ->
+                                    {
                                         val animFade = AnimationUtils.loadAnimation(this,R.anim.fade_out)
                                         viewModel.getShelf(
                                             Utils.getSimpleTextBody(""),
@@ -240,8 +239,8 @@ class ShowAllHierarchy : AppCompatActivity() {
 
                                     }
 
-                                    warehouse.contains("WH") -> {
-
+                                    warehouse.contains("WH") ->
+                                    {
                                         viewModel.getRack(
                                             Utils.getSimpleTextBody(""),
                                             Utils.getSimpleTextBody(whNo),
@@ -259,7 +258,6 @@ class ShowAllHierarchy : AppCompatActivity() {
                                         binding.palletCont.gone()
 
                                     }
-
                                 }
 
                                 binding.WHTV.click {
@@ -358,12 +356,11 @@ class ShowAllHierarchy : AppCompatActivity() {
                             binding.listSize.gone()
                             binding.itemTV.text = "No data"
                         }
-
                     }
                 }
 
-                Status.ERROR -> {
-
+                Status.ERROR ->
+                {
                     binding.hierarchyTree.gone()
                     binding.treeView.gone()
                     binding.hierarchyCont.gone()
@@ -372,7 +369,6 @@ class ShowAllHierarchy : AppCompatActivity() {
                     toast("Error found")
                     binding.listSize.gone()
                     binding.itemTV.text = "No data"
-
                 }
                 else -> {}
             }
@@ -384,8 +380,8 @@ class ShowAllHierarchy : AppCompatActivity() {
 
         viewModel.getWarehouse.observe(this){
 
-            when(it.status){
-
+            when(it.status)
+            {
                 Status.LOADING ->{
                     dialog.show()
                     dialog.setCanceledOnTouchOutside(true)
@@ -456,7 +452,8 @@ class ShowAllHierarchy : AppCompatActivity() {
          *  GET SHELF OBSERVER
          */
 
-        viewModel.getRack.observe(this){
+        viewModel.getRack.observe(this)
+        {
             when(it.status){
                 Status.LOADING ->{
                     dialog.show()
@@ -469,7 +466,6 @@ class ShowAllHierarchy : AppCompatActivity() {
                     {
                         if (it.data?.get(0)?.status == true)
                         {
-
                             dialog.dismiss()
                             binding.hierarchyCont.visible()
                             racksAdapter = ScanRackAdapter(this, it.data as ArrayList<GetRackResponse>)
@@ -507,8 +503,6 @@ class ShowAllHierarchy : AppCompatActivity() {
                         Log.i("getRack","${e.message}")
                         toast("${e.message}")
                     }
-
-
                 }
                 Status.ERROR ->
                 {
@@ -552,7 +546,6 @@ class ShowAllHierarchy : AppCompatActivity() {
                             binding.showAllRV.apply {
                                 layoutManager = LinearLayoutManager(this@ShowAllHierarchy)
                                 adapter = shelfAdapter
-
                             }
                             binding.itemTV.text = it.data[0].rackName
                             Log.i("shelfData", it.data[0].shelfName.toString())
@@ -591,7 +584,6 @@ class ShowAllHierarchy : AppCompatActivity() {
                     toast(it.data?.get(0)?.error!!)
                     dialog.dismiss()
                 }
-
                 else -> {}
             }
         }
@@ -641,7 +633,6 @@ class ShowAllHierarchy : AppCompatActivity() {
                                     palletAdapter.filter.filter(newText)
                                     return true
                                 }
-
                             })
                         }
                         else
@@ -657,8 +648,6 @@ class ShowAllHierarchy : AppCompatActivity() {
                         toast("${e.message}")
                         binding.showAllRV.adapter = null
                     }
-
-
                 }
 
                 Status.ERROR -> {

@@ -73,10 +73,13 @@ class CartonDetailActivity : AppCompatActivity() {
 
             when(it.status){
 
-                Status.LOADING ->{
+                Status.LOADING ->
+                {
 
                 }
-                Status.SUCCESS ->{
+
+                Status.SUCCESS ->
+                {
                     Log.i("palletCode","${it.data?.get(0)?.pilotCode}")
 
                     val warehouse = it.data?.get(0)?.wHName.toString()
@@ -118,7 +121,8 @@ class CartonDetailActivity : AppCompatActivity() {
 
         viewModel.getCartonDetails("$analyticalNo")
 
-        viewModel.getCartonDetails.observe(this){
+        viewModel.getCartonDetails.observe(this)
+        {
 
             when(it.status){
 
@@ -127,7 +131,8 @@ class CartonDetailActivity : AppCompatActivity() {
                 Status.SUCCESS ->
                 {
                     it.let {
-                        if(isNetworkConnected(this)){
+                        if(isNetworkConnected(this))
+                        {
 
                             binding.materialNameTV.text = it.data?.get(0)?.materialName
                             binding.analyticalNumTV.text = it.data?.get(0)?.analyticalNo

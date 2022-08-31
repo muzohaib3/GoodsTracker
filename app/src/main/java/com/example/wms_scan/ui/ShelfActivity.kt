@@ -121,9 +121,6 @@ class ShelfActivity : AppCompatActivity() {
 
     private fun initListener(){
 
-        binding.toolbar.click {
-            clearPreferences(this)
-        }
 
         binding.swipeRefresh.setOnRefreshListener {
             if (isNetworkConnected(this))

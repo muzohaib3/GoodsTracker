@@ -124,4 +124,7 @@ dependencies {
     //gif
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
 
+    //Google play services location
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+
 }
