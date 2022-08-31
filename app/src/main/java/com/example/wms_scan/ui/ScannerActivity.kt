@@ -404,3 +404,4 @@ class ScannerActivity : AppCompatActivity() {
         }
     }
 }
+//
