@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupUi(){
-
+//
         supportActionBar?.hide()
         dialog = CustomProgressDialog(this)
         setTransparentStatusBarColor(R.color.transparent)
